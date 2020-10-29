@@ -10,7 +10,7 @@
     "clean": "rimraf dist",
     "prestart:dev": "yarn clean",
     "start:dev": "tsc-watch --onSuccess \"nodemon -r dotenv/config\"",
-    "start:prod": "node dist/app.js",
+    "start:prod": "node -r dotenv/config dist/app.js",
     "prebuild": "yarn clean",
     "build": "tsc -p tsconfig.build.json",
     "predeploy": "yarn build",
