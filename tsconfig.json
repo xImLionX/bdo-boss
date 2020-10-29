@@ -1,0 +1,19 @@
+{
+  "compilerOptions": {
+    "incremental": true,
+    "moduleResolution": "Node",
+    "target": "ES2019",
+    "module": "CommonJS",
+    "strict": true,
+    "sourceMap": true,
+    "declaration": true,
+    "allowSyntheticDefaultImports": true,
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
+    "declarationDir": "dist/types",
+    "outDir": "dist",
+    "typeRoots": ["node_modules/@types"],
+    "baseUrl": "./app"
+  },
+  "exclude": ["node_modules", "dist"]
+}

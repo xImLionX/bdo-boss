@@ -1,0 +1,39 @@
+{
+  "appenders": {
+    "console": {
+      "type": "stdout",
+      "layout": {
+        "type": "pattern",
+        "pattern": "%[[%d][%c] [%p]%] %m"
+      }
+    },
+    "app": {
+      "type": "file",
+      "filename": "logs/app.log",
+      "maxLogSize": 10485760,
+      "numBackups": 100,
+      "layout": {
+        "type": "pattern",
+        "pattern": "[%d][%c] [%p] %m"
+      }
+    },
+    "errorFile": {
+      "type": "file",
+      "filename": "logs/errors.log",
+      "maxLogSize": 10485760,
+      "numBackups": 100,
+      "layout": {
+        "type": "pattern",
+        "pattern": "[%d][%c] [%p] %m"
+      }
+    },
+    "errors": {
+      "type": "logLevelFilter",
+      "level": "ERROR",
+      "appender": "errorFile"
+    }
+  },
+  "categories": {
+    "default": { "appenders": ["app", "errors", "console"], "level": "DEBUG" }
+  }
+}
